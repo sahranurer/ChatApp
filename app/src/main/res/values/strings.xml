@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ChatApp</string>
     <string name="app_account">Already have an account ? </string>
+    <string name="app_login_back"> Back to registration </string>
 </resources>

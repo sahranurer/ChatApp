@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746717615012",
+    "project_id": "chatkotlin-12d9e",
+    "storage_bucket": "chatkotlin-12d9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746717615012:android:3e24acc093c8582d04e731",
+        "android_client_info": {
+          "package_name": "com.sahraer.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746717615012-0pb3tq2fkcab2lscbkngad11sdaggv06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJaeqCuuajg5IpkhNWai8G8wDFHudUIH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746717615012-0pb3tq2fkcab2lscbkngad11sdaggv06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
