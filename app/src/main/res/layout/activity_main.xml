@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <EditText
         android:id="@+id/username_edittext_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
 
+        android:layout_marginEnd="50dp"
         android:background="@drawable/bg_input"
         android:hint="Username"
         android:inputType="textPersonName"
@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="377dp" />
+        tools:layout_editor_absoluteY="376dp" />
 
     <EditText
         android:id="@+id/password_edittext_register"
@@ -76,15 +76,16 @@
         app:layout_constraintStart_toStartOf="@+id/username_edittext_register"
         app:layout_constraintTop_toBottomOf="@+id/username_edittext_register" />
 
-    <ImageView
-        android:id="@+id/imageView_select"
-        android:layout_width="228dp"
-        android:layout_height="233dp"
-        android:layout_marginTop="18dp"
+    <Button
+        android:id="@+id/button_select_image"
+        android:layout_width="200dp"
+        android:layout_height="201dp"
+        android:background="@drawable/rounded_select_photo"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/username_edittext_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,43 +1,57 @@
 package com.sahraer.chatapp
 
-import android.Manifest
-import android.content.ContentValues.TAG
+
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Build
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sahraer.chatapp.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+
+
+
         binding.buttonRegister.setOnClickListener {
             performRegister()
         }
 
+
         binding.alreadyHaveAccountTextView.setOnClickListener {
-            Log.d("MainActivity", "Try to show login activity ")
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            Log.d("RegisterActivity", "Try to show login activity ")
+            val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        binding.imageViewSelect.setOnClickListener {
+        binding.buttonSelectImage.setOnClickListener {
+            Log.d("MainActivity","Try to photo selector")
+
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            startActivityForResult(intent,0)
+
+
+        }
+
+
 
 
 
@@ -45,7 +59,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    }
 
 
 
@@ -73,6 +86,8 @@ class MainActivity : AppCompatActivity() {
             }
 
     }
+
+
 
 
 }
